@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300..1000,0.5&display=swap');
+
+:root {
+  --primary: #206bf8;
+  --secondary: #9ef7cd;  
+  --video-controls-h: 2rem;
+
+  --max-video-width: 800px;
+
+  --video_max_w: min(
+    var(--max-video-width),
+    calc(100vw - 3rem - var(--mid-gap) - var(--features-w))
+  );
+  --video_max_h: calc(var(--video_max_w) * 9 / 16);
+}
+
+* {
+  font-family: 'Inter';
+}
+
+
+body {
+  background-color: #333;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.prim-button {
+  background-color: var(--primary);
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+}
+
+.prim-button.dark-bg {
+  border-color: var(--primary);
+}
+
+.prim-button:hover {
+  background-color: black;
+}
+
+
+.prim-button.secondary {
+  background-color: var(--secondary);
+  color: black;
+}
+
+.prim-button.secondary:hover {
+  background-color: black;
+  border-color: var(--secondary);
+  color: var(--secondary)
+}
+
+.prim-button.terciary {
+  background-color: #494949;
+}
+
+.prim-button.terciary:hover {
+  background-color: black;
+}
+
+
+.type-style-example {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  margin-block: 1rem 3rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-style-example span {
+  font-family: 'Recursive', sans-serif;
+  &:nth-child(1) {
+    --mix: 0;
+  }
+  &:nth-child(2) {
+    --mix: 0.2;
+  }
+  &:nth-child(3) {
+    --mix: 0.4;
+  }
+  &:nth-child(4) {
+    --mix: 0.6;
+  }
+  &:nth-child(5) {
+    --mix: 0.8;
+  }
+  &:nth-child(6) {
+    --mix: 1;
+  }
+}
+
+
+.baseline-shift span {
+  position: relative;
+  top: calc(2rem * (0.5 - var(--mix)));
+}
+
+.font-size span {
+  font-size: calc(0.8rem * var(--mix) + 1rem);
+}
+
+.font-weight span {
+  font-weight: calc(700 * var(--mix) + 300);
+}
+
+.background-color span {
+  padding: 0.3rem 0.5rem;
+  --mix: 0;
+  background-color: color-mix(in lab, #006815 calc(100% * var(--mix)), #ea004d);
+}
+
+.font-color span {
+  --mix: 0;
+  color: color-mix(in lab, #019905 calc(100% * var(--mix)), #ff5179);
+}
+
+.opacity span {
+  --mix: 0;
+  opacity: calc(0.9 * var(--mix) + 0.1);
+}
+
+.grow-wrap {
+  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+  display: grid;
+}
+.grow-wrap::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) ' ';
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+
+.grow-wrap > textarea,
+.grow-wrap::after {
+  /* Identical styling required!! */
+  border: 1px solid transparent;
+  padding: 1rem;
+  font: inherit;
+
+  cursor: pointer;
+
+  min-height: 12rem;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.grow-wrap > textarea {
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  /* Firefox shows scrollbar on growth, you can hide like this. */
+  overflow: hidden;
+
+  background-color: transparent;
+  color: #ddd;
+  border-color: #555;
+  transition: background-color 0.3s;
+}
+
+.grow-wrap > textarea:focus {
+  outline: none;
+  border-color: transparent;
+  background-color: #ddd;
+  color: #333;
+}
+
+input[type=text] {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #ddd;
+  background-color: transparent;
+  border: 1px solid #555;
+  transition: background-color 0.3s;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border-color: transparent;
+  background-color: #ddd;
+  color: #333;
+}
+
+
+
+
+
+.slider {
+  margin-block: 2rem;
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 5fr 1fr;
+  padding-top: 1rem;
+  border-top: 1px solid #555;
+}
+.slider:last-of-type {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #555;
+}
+
+.slider .first { text-align: left; }
+.slider .last { text-align: right; }
+
+.slider .sentence {
+  grid-column: 1 / -1;
+  text-align: center;
+  user-select: none;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
