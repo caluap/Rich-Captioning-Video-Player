@@ -6,7 +6,7 @@ _A Vue 3 / Vite implementation for researching customizable affective & prosodic
 [**ASSETS ’25 paper**](https://doi.org/10.1145/3663547.3746400)
 
 CuCap lets viewers decide **which speech features** (valence, arousal, loudness, pitch, rhythm) appear in captions **and how** those features map to seven typographic style channels (background-colour, baseline-shift, font-color, font-size, font-weight, opacity, and letter-spacing).  
-The system underpins the study reported in our ASSETS 2025 paper and is released so other researchers can replicate, extend, or audit our work.
+The system underpins the study reported in our [ASSETS 2025](https://assets25.sigaccess.org/) paper and is released so other researchers can replicate, extend, or audit our work.
 
 ---
 
