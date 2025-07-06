@@ -10,8 +10,8 @@ const scrollingCaptions = false,
   inputsArray = {},
   // not really a "list" for this version, but yeah
   listOfVideos = {
-    video_src: '/festival.mp4',
-    captions: '/festival_caption.vtt'
+    video_src: '/Camila_Ledo_Monologue_-_Far_Away.mp4',
+    captions: '/Camila_Ledo_Monologue_-_Far_Away.vtt'
   },
   materialIcons = {
     None: 'select',
@@ -776,6 +776,15 @@ onMounted(() => {
               </button>
             </div>
           </div>
+          <div id="video-credits">
+            Video credits:
+            <a href="https://vimeo.com/541027933" target="_blank"
+              >Camila Ledo Monologue — Far Away</a
+            >. Licensed under
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+              >Creative Commons Attribution 4.0 International (CC BY 4.0)</a
+            >
+          </div>
         </main>
       </div>
       <aside>
@@ -1301,5 +1310,11 @@ button.done {
   background-color: black;
   color: darkgray;
   border-color: darkgray;
+}
+
+#video-credits,
+#video-credits a {
+  color: #999;
+  font-size: 0.75rem;
 }
 </style>
