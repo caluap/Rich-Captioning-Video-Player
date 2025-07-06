@@ -1,39 +1,34 @@
-...
+# CuCap – Rich-Captioning Video Player
 
-### Sample video
+_A Vue 3 / Vite implementation for researching customizable affective & prosodic captions_
 
-# pilot
+[**Live demo**](https://cucap.surge.sh/) ・
+[**ASSETS ’25 paper**](https://doi.org/10.1145/3663547.3746400)
 
-This template should help get you started developing with Vue 3 in Vite.
+CuCap lets viewers decide **which speech features** (valence, arousal, loudness, pitch, rhythm) appear in captions **and how** those features map to seven typographic style channels (background-colour, baseline-shift, font-color, font-size, font-weight, opacity, and letter-spacing).  
+The system underpins the study reported in our ASSETS 2025 paper and is released so other researchers can replicate, extend, or audit our work.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Quick start
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+git clone https://github.com/caluap/Rich-Captioning-Video-Player.git
+cd Rich-Captioning-Video-Player
+npm install        # install dependencies
+npm run dev        # hot-reload dev server at http://localhost:5173
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
+## Media Credit
+
+The example file comes from “Camila Ledo Monologue – Far Away” by Camila Ledo.
+
+- Source: [https://vimeo.com/541027933](https://vimeo.com/541027933)
+- Licensed under [Creative Commons Attribution (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- No changes were made to the original video.
+
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
