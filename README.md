@@ -1,4 +1,4 @@
-# CuCap – Rich-Captioning Video Player
+# CuCap: Rich-Captioning Video Player
 
 _A Vue 3 / Vite implementation for researching customizable affective & prosodic captions_
 
@@ -29,6 +29,27 @@ The example file comes from “Camila Ledo Monologue – Far Away” by Camila L
 - Licensed under [Creative Commons Attribution (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - No changes were made to the original video.
 
-```
 
+## Citation
+
+If you use this work, please cite the paper it came from:
+```
+@inproceedings{DeLacerdaPataca2025CuCap,
+  author    = {de Lacerda Pataca, Caluã and Ahn, SooYeon and Yoo, Suhyeon and 
+              Kim, JooYeong and Truong, Khai N. and Hong, Jin-Hyuk and 
+              Peiris, Roshan L. and Huenerfauth, Matt},
+  title     = {CuCap: Comparative Analysis of Customized Captioning between 
+              North American and South Korean d/Deaf and Hard-of-Hearing 
+              Users},
+  booktitle = {Proceedings of the 27th International ACM SIGACCESS Conference 
+              on Computers and Accessibility (ASSETS '25)},
+  year      = {2025},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  doi       = {10.1145/3663547.3746400},
+  isbn      = {979-8-4007-0676-9},
+  location  = {Denver, CO, USA},
+  pages     = {1--21},
+  url       = {https://doi.org/10.1145/3663547.3746400}
+}
 ```
